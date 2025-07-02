@@ -8,6 +8,7 @@ jobs:
       - name: Download File
         run: wget https://github.com/pitycycy/example-github-actions-helloworld/raw/refs/heads/main/hello.txt
       # 这将从您的工作流中上传工件，且允许您在工作流完成后在作业之间共享数据并存储数据
+      # 你可以在 https://github.com/pitycycy/example-github-actions-helloworld 中的 Actions 选项卡中查看文件
       - uses: actions/upload-artifact@v4
         with:
           name: my-artifact               # 文件名称
