@@ -1,9 +1,15 @@
+# 工作流名称
 name: hello_workflow
+# 指定工作流执行的条件
 on: [push]
+# 列出所有想要进行的作业（所有作业将并行运行）
 jobs:
   print-hello:
+    # 指定运行环境
     runs-on: ubuntu-latest
     steps:
+      # 将你的代码仓库签出到 runner（工作流运行环境），这样后续的步骤就能读取和操作你的代码仓库
+      # 参考链接 https://github.com/actions/checkout
       - uses: actions/checkout@v4
       - name: Hello world using echo
         run: echo "$(<hello.txt)"
