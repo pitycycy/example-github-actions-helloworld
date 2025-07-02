@@ -10,6 +10,6 @@ jobs:
       # 这将从您的工作流中上传工件，且允许您在工作流完成后在作业之间共享数据并存储数据
       - uses: actions/upload-artifact@v2
         with:
-        - name: my-artifact               # 文件名称
-        - path: hello.txt                 # 文件路径
-        - if-no-files-found: error        # 未找到文件时执行的操作
+          name: my-artifact               # 文件名称
+          path: hello.txt                 # 文件路径
+          if-no-files-found: error        # 未找到文件时执行的操作
